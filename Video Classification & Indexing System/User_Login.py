@@ -12,6 +12,7 @@ class Login:
         self.root.resizable(False,False)
         self.root.configure(background="lightgray")
         self.root.title("login")
+
         frame_login=Frame(root,bg='#078fc9')
         frame_login.place(x=100, y=100, width=500, height=55)
         title = Label(text="Login", width=20, font=('Arial Rounded MT Bold', 25) ,bg='#078fc9' ,fg='white')
