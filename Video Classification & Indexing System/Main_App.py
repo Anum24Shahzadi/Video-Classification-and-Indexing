@@ -55,17 +55,19 @@ class Main_App:
         self.root = root
         self.root.geometry("500x500")
         self.root.resizable(False, False)
-        self.root.configure(background="black")
+        self.root.configure(background="lightgrey")
         self.root.title("Main_App")
-        btn_bar = Frame(root, width=500, highlightbackground='white', height='40').place(x='0', y='5')
+        frame_mainbar=Frame(root,bg='White')
+        frame_mainbar.place(x=0, y=4, width=500, height=50)
+        #btn_bar = Frame(root, width=490, highlightbackground='white', height='40').place(x='5', y='10')
         Frame.txt_name = Entry(root)
-        Frame.txt_name.place(x=300, y=12)
-        btn_search = Button(root, text='search', width=8, bg='black', fg='white', command=self.search).place(x=430, y=9)
-        btn_upload = Button(root, text='upload', width=8, bg='black', fg='white', command=self.upload).place(x=230, y=9)
-        btn_logout = Button(root, text='Logout', width=8, bg='black', fg='white', command=self.logout).place(x=5, y=9)
+        Frame.txt_name.place(x=290, y=15)
+        btn_search = Button(root, text='Search', width=10, bg='#078fc9',font=('goudy old style', 10,'bold'), fg='white', command=self.search).place(x=415, y=12)
+        btn_upload = Button(root, text='Upload', width=10, bg='#078fc9',font=('goudy old style', 10,'bold'), fg='white', command=self.upload).place(x=200, y=12)
+        btn_logout = Button(root, text='Logout', width=10,font=('goudy old style', 10,'bold'), bg='#078fc9', fg='white', command=self.logout).place(x=5, y=12)
         video_box = Frame(root, width=400, highlightbackground='white', height='300').place(x='50', y='100')
-        btn_next = Button(root, text='>', width=4, bg='black', fg='white', command=self.next).place(x=250, y=450)
-        btn_back = Button(root, text='<', width=4, bg='black', fg='white', command=self.back).place(x=210, y=450)
+        btn_next = Button(root, text='>', width=4, bg='#078fc9', fg='white', command=self.next).place(x=250, y=450)
+        btn_back = Button(root, text='<', width=4, bg='#078fc9', fg='white', command=self.back).place(x=210, y=450)
 
     # to search the user required category
     def search(self):

@@ -4,35 +4,34 @@ from tkinter import messagebox
 import pymysql
 
 
-
 class Login:
     def __init__(self, root):
         self.root = root
-        self.root.geometry("700x600+100+50")
+        self.root.geometry("500x500")
         self.root.resizable(False,False)
-        self.root.configure(background="lightgray")
+        self.root.configure(background="lightgrey")
         self.root.title("login")
 
         frame_login=Frame(root,bg='#078fc9')
-        frame_login.place(x=100, y=100, width=500, height=55)
-        title = Label(text="Login", width=20, font=('Arial Rounded MT Bold', 25) ,bg='#078fc9' ,fg='white')
-        title.place(x=140, y=110)
+        frame_login.place(x=50, y=50, width=400, height=55)
+        title = Label(text="Login", width=10, font=('Arial Rounded MT Bold', 25) ,bg='#078fc9' ,fg='white')
+        title.place(x=140, y=50)
 
         frame_entry=Frame(root,bg='white')
-        frame_entry.place(x=100,y=165,width=500,height=340)
+        frame_entry.place(x=50,y=110,width=400,height=340)
 
         username = Label(root, text="User Name:", width=20, font=('goudy old style', 15,'bold'), bg="white", fg='black')
-        username.place(x=150, y=200)
-        self.txt_username = Entry(root,font=('times new roman',15),bg='lightgray')
-        self.txt_username.place(x=210, y=230,width=270,height=40)
+        username.place(x=60, y=150)
+        self.txt_username = Entry(root,font=('times new roman',15),bg='lightgrey')
+        self.txt_username.place(x=120, y=180,width=270,height=40)
 
         Password = Label(root, text="Password:", width=20, font=('goudy old style', 15,'bold'), bg="white", fg='Black')
-        Password.place(x=140, y=280)
+        Password.place(x=50, y=240)
 
-        self.txt_pwd = Entry(root,show="*",font=('times new roman',15),bg='lightgray')
-        self.txt_pwd.place(x=210, y=310,width=270,height=40)
+        self.txt_pwd = Entry(root,show="*",font=('times new roman',15),bg='lightgrey')
+        self.txt_pwd.place(x=120, y=270,width=270,height=40)
 
-        btn_submit=Button(root, text='LOGIN', width=8, bg='#078fc9',fg='white',font=('goudy old style', 15,'bold') ,command=self.DB_Conactivity).place(x=210, y=370,height=40,width=270)
+        btn_submit=Button(root, text='LOGIN', width=8, bg='#078fc9',fg='white',font=('goudy old style', 15,'bold') ,command=self.DB_Conactivity).place(x=120, y=350,height=40,width=270)
     def DB_Conactivity(self):
          if self.txt_username.get() == "" or self.txt_pwd.get() == "":
            messagebox.showerror("Error", "All fields are Required", parent=self.root)

@@ -6,12 +6,8 @@ splash_root = Tk()
 
 splash_root.title("Splash Screen")
 splash_root.geometry("800x600")
-splash_root.configure(background="black")
 
-#background_image = PhotoImage(file="splash.png")
-
-#background = Label(splash_root, image=background_image, bd=0)
-#background.pack()
+splash_root.configure(background="lightgrey")
 
 def login():
     splash_root.destroy()
@@ -30,15 +26,15 @@ def main():
 
     root.title("Video Classifier and Indexer")
     root.geometry("500x500")
-    root.configure(background="black")
+    root.configure(background="lightgray")
 
 
 
-    L_to_Con = Label(root, text="Login to Continue", font=("bold", 30,), bg="black", fg='grey').place(x=100, y=50)
-    login_label = Label(root, text="Already a memeber ?", bg="black", fg="grey").place(x=200, y=200)
-    Button(root, text='Login', width=20, bg='grey', command=login).place(x=180, y=250)
-    signup_label = Label(root, text="Dont have an account ?", bg="black", fg="grey").place(x=190,y=300)
-    Button(root, text='Signup', width=20, bg='grey', command=signup).place(x=180, y=350)
+    L_to_Con = Label(root, text="Login to Continue", font=("bold", 30,), bg="lightgrey", fg='Black').place(x=100, y=50)
+    login_label = Label(root, text="Already a memeber ?", bg="lightgrey",font=('goudy old style', 15), fg="black").place(x=180, y=200)
+    Button(root, text='Login', width=25, bg='#078fc9',fg='white',font=('goudy old style', 15,'bold'), command=login).place(x=130, y=230)
+    signup_label = Label(root, text="Dont have an account ?", bg="lightgrey",font=('goudy old style', 15), fg="black").place(x=180,y=300)
+    Button(root, text='Signup',width=25, bg='#078fc9',fg='white',font=('goudy old style', 15,'bold'), command=signup).place(x=130, y=330)
 
 
 
