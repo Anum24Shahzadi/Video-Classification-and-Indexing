@@ -11,11 +11,11 @@ splash_root.geometry("800x600")
 splash_root.configure(background="lightgrey")
 
 def login():
-    #splash_root.destroy()
+    splash_root.destroy()
     system('User_Login.py')
 
 def signup():
-    #splash_root.destroy()
+    splash_root.destroy()
     system('User-Signup.py')
 
 
