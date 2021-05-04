@@ -21,7 +21,7 @@ class Signup:
         frame_entry.place(x=50,y=80,width=400,height=380)
 
         name = Label(root, text="Name:", width=10, font=('goudy old style', 15,'bold'), bg="white", fg='black')
-        name.place(x=105, y=100)
+        name.place(x=100, y=100)
         self.txt_name = Entry(root,font=('times new roman',15),bg='lightgrey')
         self.txt_name.place(x=130, y=130,width=270,height=30)
 

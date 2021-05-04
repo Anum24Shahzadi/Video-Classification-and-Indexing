@@ -3,7 +3,6 @@ from os import system
 from tkinter import messagebox
 import pymysql
 
-
 class Login:
     def __init__(self, root):
         self.root = root
@@ -65,5 +64,7 @@ class Login:
                 messagebox.showerror("Error", f"Error due to:{str(es)}", parent=self.root)
 
 root = Tk()
+
 obj=Login(root)
+
 root.mainloop()
